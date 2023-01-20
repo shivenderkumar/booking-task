@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/btn_start_time"
+        android:text="Start Time"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:text=""
+        android:hint="start time"
+        android:textSize="16dp"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/tv_startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/btn_start_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_start_time"
+        app:layout_constraintBottom_toBottomOf="@id/btn_start_time"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginLeft="10dp"
+        android:id="@+id/btn_end_time"
+        android:text="End Time"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/btn_start_time"
+        app:layout_constraintTop_toBottomOf="@id/btn_start_time"/>
+
+    <TextView
+        android:text=""
+        android:hint="end time"
+        android:textSize="16dp"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/tv_endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/btn_start_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_end_time"
+        app:layout_constraintBottom_toBottomOf="@id/btn_end_time"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
