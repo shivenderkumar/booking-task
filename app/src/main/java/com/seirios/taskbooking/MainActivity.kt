@@ -260,9 +260,15 @@ class MainActivity : AppCompatActivity() {
                 }
             }else if(facilityName.equals(item.facility)){
                 if(date.equals(item.date)){
-                    if((startTime.substring(0,startTime.length-2)).toInt() >= (item.startTime.substring(0,item.startTime.length-2)).toInt()
+                    if( ((startTime.substring(0,startTime.length-2)).toInt() >= (item.startTime.substring(0,item.startTime.length-2)).toInt()
                         &&
-                        (startTime.substring(0,startTime.length-2)).toInt() <= (item.endTime.substring(0,item.endTime.length-2)).toInt()    ){
+                        (startTime.substring(0,startTime.length-2)).toInt() < (item.endTime.substring(0,item.endTime.length-2)).toInt())
+                        ||
+                        ((endTime.substring(0,endTime.length-2)).toInt() > (item.startTime.substring(0,item.startTime.length-2)).toInt()
+                                &&
+                                (endTime.substring(0,endTime.length-2)).toInt() <= (item.endTime.substring(0,item.endTime.length-2)).toInt())
+                    ){
+
                         showCustomDialog("Booking Failed, Already Booked")
                         return
                     }
